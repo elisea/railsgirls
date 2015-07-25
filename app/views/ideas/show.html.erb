@@ -10,7 +10,7 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
+  <%= image_tag(@idea.picture_url, :width => 100) if @idea.picture.present? %>
 
   <h3>Comments</h3>
   <% @comments.each do |comment|%>
