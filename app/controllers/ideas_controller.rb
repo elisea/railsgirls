@@ -12,6 +12,7 @@ class IdeasController < ApplicationController
   def show
     @comments = @idea.comments.all
     @comment = @idea.comments.build
+    @user = @idea.user
   end
 
   # GET /ideas/new
@@ -27,6 +28,7 @@ class IdeasController < ApplicationController
   # POST /ideas.json
   def create
     @idea = Idea.new(idea_params)
+    @idea.user = current_user
 
     respond_to do |format|
       if @idea.save

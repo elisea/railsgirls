@@ -9,6 +9,12 @@
 </p>
 
 <p>
+	<strong>User:</strong>
+	<%= @user.email if @user.email.present? %>
+</p>
+
+
+<p>
   <strong>Picture:</strong>
   <%= image_tag(@idea.picture_url, :width => 100) if @idea.picture.present? %>
 
