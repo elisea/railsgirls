@@ -8,11 +8,12 @@
   <%= @idea.description %>
 </p>
 
+<% if @user %>
 <p>
 	<strong>User:</strong>
-	<%= @user.email if @user.email.present? %>
+	<%= @user.email %>
 </p>
-
+<% end %>
 
 <p>
   <strong>Picture:</strong>

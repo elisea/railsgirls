@@ -13,6 +13,8 @@ group :production do
 end	
 
 gem 'devise'
+gem 'gravtastic'
+
 gem 'carrierwave'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
