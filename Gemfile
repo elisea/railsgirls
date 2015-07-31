@@ -7,11 +7,20 @@ gem 'rails', '4.2.2'
 group :development do
 	gem 'sqlite3'
 end
+
+group :test, :development do
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
+
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
 end	
 
+gem 'selenium-webdriver'
+gem 'rspec'
 gem 'devise'
 gem 'gravtastic'
 
